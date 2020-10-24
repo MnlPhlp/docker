@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  nginx-proxy:
+    container_name: nginx-proxy
+    image: manniq31/jwilder-nginx-proxy:arm
+    restart: always
+    ports:
+      - 80:80
+      - 443:443     
+    volumes:
+      - certs:/etc/nginx/certs
+      - vhost:/etc/nginx/vhost.d     
+      - html:/usr/share/nginx/html     
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - autoProxy
+      
+
+  nginx-proxy-letsencrypt:
+    container_name: nginx-proxy-le
+    image: manniq31/jrcs-letsencrypt-nginx-proxy-companion:arm
+    volumes:
+      - certs:/etc/nginx/certs
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - DEFAULT_EMAIL=notify@manuel.sh
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    networks:
+      - autoProxy
+    
+volumes:
+  certs:
+  vhost:
+  html:
+
+networks:
+  autoProxy:
+    external: true
