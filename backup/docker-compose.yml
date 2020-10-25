@@ -5,9 +5,9 @@ services:
     build: .
     command: /bin/ash -c "./backup.sh /backup /volumes"
     volumes:
-      portainer_portainer_data:/volumes/portainer
-      nginx-proxy_certs:/volumes/nginx-proxy_certs
-      mnt/Ext_HDD/bakup:/backup
+      - portainer_portainer_data:/volumes/portainer
+      - nginx-proxy_certs:/volumes/nginx-proxy_certs
+      - /mnt/Ext_HDD/bakup:/backup
 
 volumes:
   portainer_portainer_data:
