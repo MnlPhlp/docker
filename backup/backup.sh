@@ -1,3 +1,5 @@
-# first parameter needs to be the name of the created tar file
-volumePath="/mnt/Ext_HDD/docker/volumes"
-tar -czvf $1 $volumePath
+# first parameter needs to be the path of the created tar files
+# first parameter needs to be the path of the folders to backup
+for filename in $2/*; do \
+    echo tar -czf "$1/`basename $filename`.tar.gz" "$filename"
+done
