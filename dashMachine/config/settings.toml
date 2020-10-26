@@ -1,0 +1,4 @@
+[Settings]
+window_title = 'Dashboard | MnlPhlp'
+theme = 'dark'
+public_command_bar_visible = false

@@ -1,0 +1,35 @@
+['Nextcloud']
+title = 'Nextcloud'
+description = 'Nextcloud file-server'
+icon = 'static/assets/images/nextcloud.png'
+onpress = {href = 'https://data.manuel.sh', target = 'new_tab'}
+
+['Portianer']
+title = 'Portainer'
+description = 'Docker manager'
+icon = 'static/assets/images/portainer.png'
+onpress = {href = 'https://portainer.manuel.sh', target = 'new_tab'}
+
+['Bookstack']
+title = 'Bookstack'
+description = 'Bookstack wiki'
+icon = 'static/assets/images/bookstack.png'
+onpress = {href = 'https://bookstack.manuel.sh', target = 'new_tab'}
+
+['Scrutiny']
+title = 'Scrutiny'
+description = 's.m.a.r.t. harddrive monitoring'
+icon = 'static/assets/images/scrutiny.png'
+onpress = {href = 'https://scrutiny.manuel.sh', target = 'new_tab'}
+
+['Moodle']
+title = 'Moodle'
+description = 'Moodle Dashboard'
+icon = 'static/assets/images/dhbw.png'
+onpress = {href = 'https://moodle.mosbach.dhbw.de/my/', target = 'new_tab'}
+
+['Github']
+title = 'Github'
+description = 'my github Repos'
+icon = 'static/assets/images/github.png'
+onpress = {href = 'https://github.com/MnlPhlp?tab=repositories', target = 'new_tab'}
