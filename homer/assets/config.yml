@@ -2,8 +2,8 @@
 # Homepage configuration
 # See https://fontawesome.com/icons for icons options
 
-title: "Demo dashboard"
-subtitle: "Homer"
+title: "Dashboard"
+subtitle: "Raspberry"
 logo: "logo.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
@@ -58,7 +58,7 @@ links:
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "Applications"
+  - name: "Data"
     icon: "fas fa-cloud"
     items:
       - name: "Bookstack"
@@ -67,3 +67,18 @@ services:
         tag: "app"
         url: "https://bookstack.manuel.sh/"
         target: "_blank" # optional html a tag target attribute
+      - name: "Nextcloud"
+        logo: "assets/icons/nextcloud.png"
+        subtitle: "Nextcloud file-server"
+        tag: "app"
+        url: "https://data.manuel.sh/"
+        target: "_blank" # optional html a tag target attribute
+  - name: "System"
+      icon: "fas fa-microchip"
+      items:
+        - name: "Portainer"
+          logo: "assets/icons/portainer.png"
+          subtitle: "Docker manager"
+          tag: "data"
+          url: "https://portainer.manuel.sh/"
+          target: "_blank" # optional html a tag target attribute        
