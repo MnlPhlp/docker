@@ -79,7 +79,6 @@ services:
         subtitle: "Docker manager"
         url: "https://portainer.manuel.sh/"
         target: "_blank" # optional html a tag target attribute   
-        icon: "fas fa-microchip"
       - name: "Scrutiny"
         logo: "assets/icons/scrutiny.png"
         subtitle: "drive monitor"
