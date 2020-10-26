@@ -72,16 +72,16 @@ services:
         url: "https://data.manuel.sh/"
         target: "_blank" # optional html a tag target attribute
   - name: "System"
-      icon: "fas fa-microchip"
-      items:
-        - name: "Portainer"
-          logo: "assets/icons/portainer.png"
-          subtitle: "Docker manager"
-          url: "https://portainer.manuel.sh/"
-          target: "_blank" # optional html a tag target attribute   
-          icon: "fas fa-microchip"
-        - name: "Scrutiny"
-          logo: "assets/icons/scrutiny.png"
-          subtitle: "drive monitor"
-          url: "https://scrutiny.manuel.sh/"
-          target: "_blank" # optional html a tag target attribute        
+    icon: "fas fa-microchip"
+    items:
+      - name: "Portainer"
+        logo: "assets/icons/portainer.png"
+        subtitle: "Docker manager"
+        url: "https://portainer.manuel.sh/"
+        target: "_blank" # optional html a tag target attribute   
+        icon: "fas fa-microchip"
+      - name: "Scrutiny"
+        logo: "assets/icons/scrutiny.png"
+        subtitle: "drive monitor"
+        url: "https://scrutiny.manuel.sh/"
+        target: "_blank" # optional html a tag target attribute        
