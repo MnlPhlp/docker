@@ -21,6 +21,7 @@ services:
     depends_on:
       - bookstack_db
     networks: 
+      - internal
       - autoProxy
 
   bookstack_db:
@@ -37,7 +38,10 @@ services:
     volumes:
       - ./config/database/:/config
     restart: unless-stopped
+    networks: 
+      - internal
 
 networks:
+  internal:
   autoProxy:
     external: true
