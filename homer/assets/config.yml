@@ -62,12 +62,12 @@ services:
     icon: "fas fa-cloud"
     items:
       - name: "Bookstack"
-        logo: "assets/icons/bookstack.png"
+        logo: "assets/icons/custom/bookstack.png"
         subtitle: "Bookstack wiki"
         url: "https://bookstack.manuel.sh/"
         target: "_blank" # optional html a tag target attribute
       - name: "Nextcloud"
-        logo: "assets/icons/nextcloud.png"
+        logo: "assets/icons/custom/nextcloud.png"
         subtitle: "Nextcloud file-server"
         url: "https://data.manuel.sh/"
         target: "_blank" # optional html a tag target attribute
@@ -75,12 +75,12 @@ services:
     icon: "fas fa-microchip"
     items:
       - name: "Portainer"
-        logo: "assets/icons/portainer.png"
+        logo: "assets/icons/custom/portainer.png"
         subtitle: "Docker manager"
         url: "https://portainer.manuel.sh/"
         target: "_blank" # optional html a tag target attribute   
       - name: "Scrutiny"
-        logo: "assets/icons/scrutiny.png"
+        logo: "assets/icons/custom/scrutiny.png"
         subtitle: "drive monitor"
         url: "https://scrutiny.manuel.sh/"
         target: "_blank" # optional html a tag target attribute        
