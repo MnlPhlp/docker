@@ -15,7 +15,7 @@ services:
       - VIRTUAL_PORT=443
       - LETSENCRYPT_HOST=bookstack.manuel.sh
     volumes:
-      - ./config/bookstack/:/config
+      - bookstack:/config
     ports:
       - 6875:80
     restart: unless-stopped
@@ -37,10 +37,14 @@ services:
       - MYSQL_USER=bookstack
       - MYSQL_PASSWORD=ItslocalSoIDontCare
     volumes:
-      - ./config/database/:/config
+      - db:/config
     restart: unless-stopped
     networks: 
       - internal
+      
+volumes:
+  db:
+  bookstack:
 
 networks:
   internal:
