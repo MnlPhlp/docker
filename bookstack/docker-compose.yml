@@ -4,6 +4,8 @@ services:
     image: linuxserver/bookstack
     container_name: bookstack
     environment:
+      - PUID=1000
+      - PGID=1000
       - DB_HOST=bookstack_db
       - DB_USER=bookstack
       - DB_PASS=ItslocalSoIDontCare
@@ -13,7 +15,7 @@ services:
       - VIRTUAL_PORT=443
       - LETSENCRYPT_HOST=bookstack.manuel.sh
     volumes:
-      - bookstack:/config
+      - /mnt/Ext_HDD/bookstack:/config
     ports:
       - 6875:80
     restart: unless-stopped
@@ -27,6 +29,8 @@ services:
     image: linuxserver/mariadb
     container_name: bookstack_db
     environment:
+      - PUID=1000
+      - PGID=1000
       - MYSQL_ROOT_PASSWORD=ItslocalSoIDontCare
       - TZ=Europe/London
       - MYSQL_DATABASE=bookstackapp
@@ -40,7 +44,6 @@ services:
 
 volumes:
   db:
-  bookstack:
 
 networks:
   internal:
