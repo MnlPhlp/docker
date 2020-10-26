@@ -12,6 +12,7 @@ services:
       - certs:/etc/nginx/certs
       - vhost:/etc/nginx/vhost.d     
       - html:/usr/share/nginx/html     
+      - ./config.conf:/etc/nginx/conf.d/external.conf
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       - autoProxy
