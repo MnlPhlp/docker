@@ -1,0 +1,20 @@
+version: '3'
+services:
+  homer:
+    image: b4bz/homer
+    container_name: homer
+    volumes:
+      - assets/:/www/assets
+    expose:
+      - 8080
+    environment:
+      - VIRTUAL_HOST=homer.manuel.sh
+      - VIRTUAL_PORT=8080
+      - LETSENCRYPT_HOST=homer.manuel.sh
+    restart: unless-stopped
+    networks: 
+        - autoProxy
+
+networks:
+  autoProxy:
+    external: true
