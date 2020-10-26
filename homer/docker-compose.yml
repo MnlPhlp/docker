@@ -4,7 +4,9 @@ services:
     image: b4bz/homer
     container_name: homer
     volumes:
-      - ./assets/:/www/assets
+      - assets:/www/assets
+      - ./assets/config.yml:/www/assets/config.yml
+      - ./assets/icons:/www/assets/icons/custom
     expose:
       - 8080
     environment:
@@ -16,6 +18,9 @@ services:
     restart: unless-stopped
     networks: 
         - autoProxy
+        
+volumes:
+  assets:
 
 networks:
   autoProxy:
