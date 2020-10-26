@@ -14,7 +14,7 @@ services:
       - SCRUTINY_WEB=true
       - SCRUTINY_COLLECTOR=true
       - VIRTUAL_HOST=scrutiny.manuel.sh
-      - VIRTUAL_PORT=9000
+      - VIRTUAL_PORT=8080
       - LETSENCRYPT_HOST=scrutiny.manuel.sh
     volumes:
       - /run/udev:/run/udev:ro
