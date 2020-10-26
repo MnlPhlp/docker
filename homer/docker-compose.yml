@@ -4,7 +4,7 @@ services:
     image: b4bz/homer
     container_name: homer
     volumes:
-      - assets/:/www/assets
+      - ./assets/:/www/assets
     expose:
       - 8080
     environment:
@@ -15,9 +15,6 @@ services:
     networks: 
         - autoProxy
 
-volumes:
-  assets:
-  
 networks:
   autoProxy:
     external: true
