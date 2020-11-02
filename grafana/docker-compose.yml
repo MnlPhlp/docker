@@ -1,0 +1,27 @@
+version : '3'
+
+services:
+  grafana:
+    container_name: grafana
+    environment:
+      - VIRTUAL_HOST=grafana.manuel.sh
+      - VIRTUAL_PORT=3000
+      - LETSENCRYPT_HOST=grafana.manuel.sh
+    ports:
+      - 3012:3000
+    restart: always
+    image: grafana/grafana
+    networks: 
+      - autoProxy
+      - grafana
+    volumes:
+      - grafana-volume:/vol01/Docker/monitoring
+
+networks:
+  grafana:
+    external: true
+  autoProxy:
+    external: true
+
+volumes:
+  grafana-volume:
