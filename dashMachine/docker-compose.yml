@@ -3,7 +3,7 @@ version: '3'
 services:
   dashmachine:
     container_name: dashmachine
-    image: manniq31/rmountjoy-dashmachine:arm
+    image: manniq31/rmountjoy-dashmachine
     ports:
       - 5002:5000
     volumes:
@@ -14,6 +14,7 @@ services:
       - LETSENCRYPT_HOST=dash.manuel.sh
     networks:
       - autoProxy
+    restart: always
 
 networks:
   autoProxy:
