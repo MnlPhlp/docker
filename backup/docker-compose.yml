@@ -7,10 +7,26 @@ services:
     volumes:
       - portainer_portainer_data:/volumes/portainer
       - nginx-proxy_certs:/volumes/nginx-proxy_certs
+      - nginx-proxy_html:/volumes/nginx-proxy_html
+      - nginx-proxy_vhost:/volumes/nginx-proxy_vhost
+      - bookstack_db:/volumes/bookstack_db
+      - nextcloud_db:/volumes/nextcloud_db
+      - nextcloud_nextcloud:/volumes/nextcloud_nextcloud
       - /mnt/Ext_HDD/bakup:/backup
+    restart: always
 
 volumes:
   portainer_portainer_data:
     external: true
   nginx-proxy_certs:
+    external: true
+  nginx-proxy_html:
+    external: true
+  nginx-proxy_vhost:
+    external: true
+  bookstack_db:
+    external: true
+  nextcloud_db:
+    external: true
+  nextcloud_nextcloud:
     external: true
